@@ -14,7 +14,7 @@ When /^I save the active record$/ do
 end
 
 When /^I reload the active record$/ do
-  @instance = @instance.class.find(@instance.id)
+  @instance = @instance.class.unscoped.find(@instance.id)
 end
 
 When /^I delete the active record$/ do
